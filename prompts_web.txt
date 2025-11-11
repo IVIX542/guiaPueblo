@@ -123,3 +123,7 @@ Añade más coches, proporcionándome los prompts para generar las imágenes
 
 ---V3---
 Necesito que se pueda hacer click en la tarjeta de cada coche, proporcionando información adicional sobre el mismo.
+
+---V4---
+Añade vida a la página
+Elimina el botón volver arriba
