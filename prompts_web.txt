@@ -1,0 +1,122 @@
+IA: SWE-1 (WindSurf)
+---PROMPT INICIAL (V1)---
+
+Rol: Eres un desarrollador Front-End experto, especializado en Material Design 3 (MD3) y en la creación de experiencias de usuario (UI/UX) excepcionales y responsivas.
+
+Objetivo: Generar el código completo para una página web estática de alta calidad para un museo ficticio de coches clásicos. La totalidad del sitio (HTML, CSS y JavaScript) debe estar contenida en un único archivo .html.
+
+Requisitos Técnicos Clave
+Archivo Único:
+
+Todo el código debe estar en un solo archivo .html.
+
+Todo el CSS debe estar incrustado dentro de una etiqueta <style> en el <head>.
+
+Todo el JavaScript debe estar incrustado dentro de una etiqueta <script> al final del <body>.
+
+No utilices enlaces a CDNs o archivos externos (excepto para las fuentes de Google Fonts, si es necesario, aunque es preferible usar fuentes del sistema para mantener la portabilidad). Usa SVGs en línea para los iconos (como el de luna/sol).
+
+Responsividad (Mobile-First):
+
+El diseño debe ser completamente responsivo (mobile-first).
+
+Debe verse perfecto en dispositivos móviles, tabletas y ordenadores de escritorio.
+
+Utiliza flexbox y grid para el layout.
+
+Rendimiento:
+
+El código debe ser limpio, semántico y optimizado.
+
+Usa selectores de CSS eficientes.
+
+Principios de Diseño (MD3 y UI/UX)
+Material Design 3 (MD3):
+
+El diseño debe estar fuertemente inspirado en Material Design 3.
+
+Paleta de Colores (Tokens): Define un conjunto claro de variables CSS (:root) para los tokens de color de MD3 (ej. primary, on-primary, surface, surface-container-high, outline, secondary, etc.).
+
+Tipografía: Utiliza una tipografía limpia y legible (ej. Roboto o una fuente de sistema sans-serif) con una escala de tipos clara (Display, Headline, Title, Body) inspirada en MD3.
+
+Componentes: Los elementos (botones, cards) deben imitar la estética de MD3: radios de esquina pronunciados, sombras sutiles y uso del color "surface".
+
+Modo Claro / Oscuro (Perceptible):
+
+Implementa un interruptor (toggle) de modo claro/oscuro claramente visible en el header.
+
+El interruptor debe ser funcional: al hacer clic, debe añadir o quitar una clase (ej. dark-theme) del <html> o <body>.
+
+Define los tokens de color de MD3 tanto para el modo claro (:root) como para el modo oscuro (.dark-theme). La transición debe ser suave.
+
+El sitio debe respetar la preferencia del sistema del usuario (prefers-color-scheme) en la carga inicial, pero permitir la anulación con el interruptor.
+
+UI/UX Excelente:
+
+Navegación: Un header limpio y fijo (position: sticky) que contenga el logo/título y el interruptor de modo.
+
+Microinteracciones: Añade efectos sutiles de hover y focus (ej. elevación o cambio de color en botones y cards) que se alineen con MD3 (efecto "state layers").
+
+Accesibilidad (A11y): Asegura un buen contraste de color en ambos modos. Usa HTML semántico (<header>, <main>, <section>, <footer>). Añade aria-label al interruptor de modo.
+
+Estructura del Contenido (HTML Semántico)
+Genera contenido de marcador de posición relevante (en español) para el museo.
+
+<header> (Fijo/Sticky):
+
+Título del Museo (ej. "Museo AutoClásico").
+
+Icono/Botón para el interruptor de modo claro/oscuro (usa un SVG en línea que cambie entre un sol y una luna).
+
+<main>:
+
+Sección 1: Héroe (Hero Section):
+
+Un título impactante (ej. "La Elegancia del Motor").
+
+Un párrafo introductorio.
+
+Un botón principal (MD3 "Filled Button") que diga "Ver Exhibiciones".
+
+Sección 2: Exhibiciones Principales (Gallery):
+
+Un subtítulo (ej. "Nuestras Joyas").
+
+Un grid responsivo (1 columna en móvil, 3 en escritorio) de Cards estilo MD3 ("Filled" o "Outlined").
+
+Cada card debe tener:
+
+Una imagen de marcador de posición (puedes usar https://via.placeholder.com/400x300?text=Coche+Clasico).
+
+Un título (ej. "Ferrari 250 GTO", "Mercedes-Benz 300 SL").
+
+Una breve descripción.
+
+Sección 3: Visítanos:
+
+Información de horario y ubicación.
+
+Un botón secundario (MD3 "Outlined Button") para "Comprar Entradas".
+
+<footer>:
+
+Información de copyright simple y enlaces ficticios a redes sociales.
+
+Funcionalidad (JavaScript Incrustado)
+El script debe manejar únicamente lo siguiente:
+
+Lógica del Modo Oscuro:
+
+Función para activar/desactivar la clase dark-theme en el <html>.
+
+Añadir un event listener al botón/interruptor.
+
+Persistencia: Usar localStorage para guardar la preferencia del usuario.
+
+Detección Inicial: Al cargar la página, comprobar localStorage. Si está vacío, comprobar window.matchMedia('(prefers-color-scheme: dark)').
+
+Entregable: Un único bloque de código .html que contenga todo el HTML, CSS y JS. El resultado debe ser una página web visualmente impresionante, moderna (MD3) y perfectamente funcional.
+
+
+---V2---
+Añade más coches, proporcionándome los prompts para generar las imágenes
