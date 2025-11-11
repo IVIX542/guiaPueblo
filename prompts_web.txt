@@ -133,3 +133,6 @@ Cambia el botón comprar entradas por un formulario para reservar fecha de visit
 
 ---V6---
 Añade alguna animación de fondo
+
+---V7---
+Añade la posibilidad de filtrar los cohes (por año, categoría, motor...)
