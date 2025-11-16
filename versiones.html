@@ -196,6 +196,96 @@
                 font-size: 1rem;
             }
         }
+
+        /* AI Section Styles */
+        .ai-section {
+            background: linear-gradient(135deg, var(--primary-color), #8B5CF6);
+            color: var(--on-primary);
+            padding: 2rem;
+            border-radius: 16px;
+            margin: 2rem 0;
+            box-shadow: 0 8px 32px rgba(103, 80, 164, 0.3);
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .ai-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .ai-section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 40px rgba(103, 80, 164, 0.4);
+        }
+
+        .ai-section h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            position: relative;
+            z-index: 1;
+            text-align: center;
+        }
+
+        .ai-section ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            position: relative;
+            z-index: 1;
+        }
+
+        .ai-section li {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            padding: 1rem 1.5rem;
+            margin: 0.75rem 0;
+            border-radius: 12px;
+            border-left: 4px solid rgba(255, 255, 255, 0.3);
+            transition: all 0.3s ease;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .ai-section li::before {
+            content: '🤖';
+            margin-right: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .ai-section li:hover {
+            background: rgba(255, 255, 255, 0.25);
+            transform: translateX(10px);
+            border-left-color: rgba(255, 255, 255, 0.6);
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0) rotate(0deg);
+            }
+            50% {
+                transform: translateY(-20px) rotate(180deg);
+            }
+        }
+
+        [data-theme="dark"] .ai-section {
+            background: linear-gradient(135deg, var(--primary-dark), #A78BFA);
+            box-shadow: 0 8px 32px rgba(208, 188, 255, 0.2);
+        }
+
+        [data-theme="dark"] .ai-section:hover {
+            box-shadow: 0 12px 40px rgba(208, 188, 255, 0.3);
+        }
     </style>
 </head>
 <body>
@@ -217,6 +307,17 @@
     </header>
     
     <div class="container">
+
+        <!-- IAs utilizadas -->
+        
+        <div class="ai-section">
+            <h2>IAs utilizadas</h2>
+            <ul>
+                <li>Generación de la web: SWE-1 (WindSurf)</li>
+                <li>Generación de imágenes: Nano Banana (Gemini Pro)</li>
+            </ul>
+        </div>
+
         <!-- Versión 1 -->
         <div class="version-container">
             <div class="version-header">
